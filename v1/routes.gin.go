@@ -10,5 +10,6 @@ func GinRoutes() *gin.Engine {
 	router := gin.Default()
 	routers.AuthRouter(router)
 	routers.DashboardRouter(router)
+	routers.HomeRouter(router)
 	return router
 }

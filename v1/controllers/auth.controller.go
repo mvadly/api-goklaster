@@ -22,7 +22,7 @@ func Login(c *gin.Context) {
 
 	var result, errCheck = repositories.LoginCheck(req)
 	if errCheck != nil {
-		c.JSON(400, map[string]interface{}{
+		c.JSON(500, map[string]interface{}{
 			"status": false,
 			"errors": errCheck.Error(),
 		})
